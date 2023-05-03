@@ -156,7 +156,7 @@ class _SydneyHub(_ChatHub):
         wss_link: str = "wss://sydney.bing.com/sydney/ChatHub",
         conversation_style: EdgeGPT.CONVERSATION_STYLE_TYPE = None,
     ) -> Generator[str, None, None]:
-        async for item in super().ask_stream(prompt=prompt, conversation_style=conversation_style, wss_link=wss_link, cookies=cookies):
+        async for item in super().ask_stream(prompt=prompt, conversation_style=conversation_style, wss_link=wss_link):
             yield item
 
 
