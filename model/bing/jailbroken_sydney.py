@@ -177,6 +177,7 @@ class _SydneyHubRequest(_ChatHubRequest):
         prompt: str,
         conversation_style: EdgeGPT.CONVERSATION_STYLE_TYPE,
         options: list | None = None,
+        webpage_context: dict | None = None,
     ) -> None:
         self.invocation_id = 0
         super().update(prompt=prompt, conversation_style=conversation_style, options=options)
